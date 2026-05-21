@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Az első világháború második fele Viktor</title>
+  <title>Az első világháború második fele</title>
 
   <style>
     body{
@@ -26,17 +26,10 @@
       margin-bottom:10px;
     }
 
-    header p{
-      font-size:20px;
-      opacity:0.9;
-    }
-
     nav{
       background:#222;
       padding:15px;
       text-align:center;
-      position:sticky;
-      top:0;
     }
 
     nav a{
@@ -44,7 +37,6 @@
       text-decoration:none;
       margin:0 15px;
       font-weight:bold;
-      transition:0.3s;
     }
 
     nav a:hover{
@@ -101,6 +93,24 @@
       font-weight:bold;
     }
 
+    .image-box{
+      text-align:center;
+      margin:25px 0;
+    }
+
+    .image-box img{
+      width:100%;
+      max-width:700px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .image-box p{
+      margin-top:10px;
+      font-style:italic;
+      color:#555;
+    }
+
     ul{
       margin-left:20px;
     }
@@ -112,21 +122,6 @@
       padding:20px;
       margin-top:30px;
     }
-
-    .btn{
-      display:inline-block;
-      margin-top:20px;
-      padding:12px 20px;
-      background:#8b0000;
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:#a80000;
-    }
   </style>
 </head>
 
@@ -134,14 +129,13 @@
 
   <header>
     <h1>🌍 Az első világháború második fele</h1>
-    <p>1916–1918 legfontosabb eseményei</p>
+    <p>1916–1918 fontos eseményei</p>
   </header>
 
   <nav>
     <a href="#1916">1916</a>
     <a href="#1917">1917</a>
     <a href="#1918">1918</a>
-    <a href="#kovetkezmenyek">Következmények</a>
   </nav>
 
   <div class="container">
@@ -149,22 +143,27 @@
     <section id="1916">
       <h2>1916 – A nagy csaták éve</h2>
 
+      <!-- ELSŐ KÉP -->
+      <div class="image-box">
+        <img src="vh.jpg" alt="Verduni csata">
+        <p>Verduni csata</p>
+      </div>
+
       <div class="cards">
 
         <div class="card">
           <div class="year">Verduni csata</div>
           <p>
-            A francia és német hadsereg között zajlott.
-            Az első világháború egyik leghosszabb és
-            legvéresebb csatája volt.
+            Az egyik legvéresebb csata volt a háború során.
+            Francia és német csapatok harcoltak egymással.
           </p>
         </div>
 
         <div class="card">
           <div class="year">Somme-i csata</div>
           <p>
-            Az angol és francia seregek támadták a németeket.
-            Itt vetettek be először tankokat nagyobb számban.
+            A brit és francia seregek támadást indítottak
+            a német hadsereg ellen.
           </p>
         </div>
 
@@ -174,20 +173,26 @@
     <section id="1917">
       <h2>1917 – Fordulópont</h2>
 
+      <!-- MÁSODIK KÉP -->
+      <div class="image-box">
+        <img src="vh1.jpg" alt="Amerikai katonák">
+        <p>Amerikai katonák érkezése Európába</p>
+      </div>
+
       <div class="cards">
 
         <div class="card">
           <div class="year">USA belépése</div>
           <p>
             Az Egyesült Államok belépett a háborúba
-            az antant oldalán, ami nagy segítséget jelentett.
+            az antant oldalán.
           </p>
         </div>
 
         <div class="card">
           <div class="year">Orosz forradalom</div>
           <p>
-            Oroszországban kitört a forradalom,
+            Oroszországban forradalom tört ki,
             ezért az ország kilépett a háborúból.
           </p>
         </div>
@@ -201,38 +206,31 @@
       <div class="cards">
 
         <div class="card">
-          <div class="year">Németország veresége</div>
+          <div class="year">Német vereség</div>
           <p>
-            A német hadsereg kimerült,
-            az országban éhezés és elégedetlenség alakult ki.
+            A német hadsereg és gazdaság teljesen kimerült.
           </p>
         </div>
 
         <div class="card">
           <div class="year">Fegyverszünet</div>
           <p>
-            1918. november 11-én aláírták a fegyverszünetet,
-            amely véget vetett az első világháborúnak.
+            1918. november 11-én véget ért az első világháború.
           </p>
         </div>
 
       </div>
     </section>
 
-    <section id="kovetkezmenyek">
+    <section>
       <h2>Következmények</h2>
 
       <ul>
         <li>Több millió ember halt meg.</li>
         <li>Szétesett az Osztrák–Magyar Monarchia.</li>
-        <li>Megszűnt a Német Császárság.</li>
-        <li>Átalakult Európa térképe.</li>
+        <li>Új országok jöttek létre.</li>
         <li>1919-ben megkötötték a versailles-i békét.</li>
       </ul>
-
-      <a class="btn" href="https://hu.wikipedia.org/wiki/Első_világháború" target="_blank">
-        További információ
-      </a>
     </section>
 
   </div>
