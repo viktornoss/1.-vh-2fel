@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1. Világháború Kvíz</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+}
+
+.question{
+    margin-bottom:25px;
+    padding:20px;
+    border:2px solid #ddd;
+    border-radius:10px;
+}
+
+.correct{
+    background:#b9ffb9;
+    border-color:green;
+}
+
+.wrong{
+    background:#ffb3b3;
+    border-color:red;
+}
+
+button{
+    background:#8b0000;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#result{
+    margin-top:30px;
+    font-size:24px;
+    text-align:center;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🧠 1. Világháború Kvíz</h1>
+</header>
+
+<div class="container">
+
+<form id="quizForm">
+
+<div class="question" id="box1">
+<h3>1. Mikor kezdődött az első világháború?</h3>
+<input type="radio" name="q1" value="a"> 1912<br>
+<input type="radio" name="q1" value="b"> 1914<br>
+<input type="radio" name="q1" value="c"> 1918
+</div>
+
+<div class="question" id="box2">
+<h3>2. Melyik csata volt az egyik legvéresebb?</h3>
+<input type="radio" name="q2" value="a"> Verdun<br>
+<input type="radio" name="q2" value="b"> Mohács<br>
+<input type="radio" name="q2" value="c"> Waterloo
+</div>
+
+<div class="question" id="box3">
+<h3>3. Hol vetettek be először tankokat?</h3>
+<input type="radio" name="q3" value="a"> Somme<br>
+<input type="radio" name="q3" value="b"> Verdun<br>
+<input type="radio" name="q3" value="c"> Berlin
+</div>
+
+<div class="question" id="box4">
+<h3>4. Ki lépett be 1917-ben?</h3>
+<input type="radio" name="q4" value="a"> USA<br>
+<input type="radio" name="q4" value="b"> Svédország<br>
+<input type="radio" name="q4" value="c"> Spanyolország
+</div>
+
+<div class="question" id="box5">
+<h3>5. Mi történt Oroszországban?</h3>
+<input type="radio" name="q5" value="a"> Forradalom<br>
+<input type="radio" name="q5" value="b"> Olimpia<br>
+<input type="radio" name="q5" value="c"> Királyválasztás
+</div>
+
+<button type="button" onclick="checkAnswers()">
+Eredmény
+</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function checkAnswers(){
+
+let score = 0;
+
+const answers = {
+q1:"b",
+q2:"a",
+q3:"a",
+q4:"a",
+q5:"a"
+};
+
+for(let i=1;i<=5;i++){
+
+let selected = document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+let box = document.getElementById("box"+i);
+
+box.classList.remove("correct","wrong");
+
+if(selected){
+
+if(selected.value === answers["q"+i]){
+score++;
+box.classList.add("correct");
+}else{
+box.classList.add("wrong");
+}
+
+}
+
+}
+
+document.getElementById("result").innerHTML =
+"Pontszám: " + score + " / 5";
+
+}
+
+</script>
+
+</body>
+</html>
