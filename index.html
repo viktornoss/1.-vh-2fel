@@ -6,37 +6,56 @@
   <title>Az első világháború második fele</title>
 
   <style>
-    body{
+
+    *{
       margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
       font-family: Arial, sans-serif;
-      background:#f2f2f2;
+      background:#e9ecef;
       color:#222;
       line-height:1.6;
     }
 
     header{
-      background:linear-gradient(135deg,#3b3b3b,#111);
+      background:
+      linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+      url("vh.jpg");
+      background-size:cover;
+      background-position:center;
       color:white;
       text-align:center;
-      padding:60px 20px;
+      padding:100px 20px;
     }
 
     header h1{
-      font-size:48px;
-      margin-bottom:10px;
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    header p{
+      font-size:22px;
     }
 
     nav{
-      background:#222;
-      padding:15px;
+      background:#111;
+      padding:18px;
       text-align:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
     nav a{
       color:white;
       text-decoration:none;
-      margin:0 15px;
+      margin:0 20px;
       font-weight:bold;
+      transition:0.3s;
+      font-size:18px;
     }
 
     nav a:hover{
@@ -45,42 +64,53 @@
 
     .container{
       width:90%;
-      max-width:1100px;
+      max-width:1200px;
       margin:auto;
-      padding:40px 0;
+      padding:50px 0;
     }
 
     section{
       background:white;
-      margin-bottom:30px;
-      padding:30px;
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom:40px;
+      padding:35px;
+      border-radius:15px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
     }
 
     h2{
       color:#8b0000;
-      margin-bottom:15px;
+      margin-bottom:20px;
+      font-size:34px;
     }
 
     .cards{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:20px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      margin-top:25px;
     }
 
     .card{
       background:#fafafa;
-      border:2px solid #ddd;
-      border-radius:10px;
-      padding:20px;
+      border-radius:12px;
+      overflow:hidden;
       transition:0.3s;
+      border:2px solid #ddd;
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-8px);
       border-color:#8b0000;
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
     }
 
     .year{
@@ -89,39 +119,56 @@
       display:inline-block;
       padding:8px 14px;
       border-radius:8px;
-      margin-bottom:10px;
+      margin-bottom:15px;
       font-weight:bold;
     }
 
-    .image-box{
-      text-align:center;
-      margin:25px 0;
-    }
-
-    .image-box img{
-      width:100%;
-      max-width:700px;
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .image-box p{
-      margin-top:10px;
-      font-style:italic;
-      color:#555;
-    }
-
     ul{
-      margin-left:20px;
+      margin-left:25px;
+      margin-top:15px;
+    }
+
+    li{
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:25px;
+      padding:14px 24px;
+      background:#8b0000;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#b30000;
+      transform:scale(1.05);
+    }
+
+    .quiz-box{
+      text-align:center;
+      background:#111;
+      color:white;
+      padding:50px 20px;
+      border-radius:15px;
+    }
+
+    .quiz-box h2{
+      color:white;
     }
 
     footer{
-      background:#222;
+      background:#111;
       color:white;
       text-align:center;
-      padding:20px;
-      margin-top:30px;
+      padding:25px;
+      margin-top:40px;
     }
+
   </style>
 </head>
 
@@ -129,108 +176,170 @@
 
   <header>
     <h1>🌍 Az első világháború második fele</h1>
-    <p>1916–1918 fontos eseményei</p>
+    <p>1916–1918 legfontosabb eseményei</p>
   </header>
 
   <nav>
     <a href="#1916">1916</a>
     <a href="#1917">1917</a>
     <a href="#1918">1918</a>
+    <a href="#kov">Következmények</a>
   </nav>
 
   <div class="container">
 
     <section id="1916">
-      <h2>1916 – A nagy csaták éve</h2>
 
-      <!-- ELSŐ KÉP -->
-      <div class="image-box">
-        <img src="vh.jpg" alt="Verduni csata">
-        <p>Verduni csata</p>
-      </div>
+      <h2>1916 – A nagy csaták éve</h2>
 
       <div class="cards">
 
         <div class="card">
-          <div class="year">Verduni csata</div>
-          <p>
-            Az egyik legvéresebb csata volt a háború során.
-            Francia és német csapatok harcoltak egymással.
-          </p>
+
+          <img src="vh.jpg" alt="Verduni csata">
+
+          <div class="card-content">
+
+            <div class="year">Verduni csata</div>
+
+            <p>
+              A francia és német hadsereg között zajlott.
+              Az első világháború egyik leghosszabb és
+              legvéresebb csatája volt.
+            </p>
+
+          </div>
+
         </div>
 
         <div class="card">
-          <div class="year">Somme-i csata</div>
-          <p>
-            A brit és francia seregek támadást indítottak
-            a német hadsereg ellen.
-          </p>
+
+          <img src="vh1.jpg" alt="Somme-i csata">
+
+          <div class="card-content">
+
+            <div class="year">Somme-i csata</div>
+
+            <p>
+              Az angol és francia seregek támadták a németeket.
+              Itt vetettek be először tankokat nagyobb számban.
+            </p>
+
+          </div>
+
         </div>
 
       </div>
+
     </section>
 
     <section id="1917">
-      <h2>1917 – Fordulópont</h2>
 
-      <!-- MÁSODIK KÉP -->
-      <div class="image-box">
-        <img src="vh1.jpg" alt="Amerikai katonák">
-        <p>Amerikai katonák érkezése Európába</p>
-      </div>
+      <h2>1917 – Fordulópont</h2>
 
       <div class="cards">
 
         <div class="card">
-          <div class="year">USA belépése</div>
-          <p>
-            Az Egyesült Államok belépett a háborúba
-            az antant oldalán.
-          </p>
+
+          <div class="card-content">
+
+            <div class="year">USA belépése</div>
+
+            <p>
+              Az Egyesült Államok belépett a háborúba
+              az antant oldalán.
+            </p>
+
+          </div>
+
         </div>
 
         <div class="card">
-          <div class="year">Orosz forradalom</div>
-          <p>
-            Oroszországban forradalom tört ki,
-            ezért az ország kilépett a háborúból.
-          </p>
+
+          <div class="card-content">
+
+            <div class="year">Orosz forradalom</div>
+
+            <p>
+              Oroszországban kitört a forradalom,
+              ezért az ország kilépett a háborúból.
+            </p>
+
+          </div>
+
         </div>
 
       </div>
+
     </section>
 
     <section id="1918">
+
       <h2>1918 – A háború vége</h2>
 
       <div class="cards">
 
         <div class="card">
-          <div class="year">Német vereség</div>
-          <p>
-            A német hadsereg és gazdaság teljesen kimerült.
-          </p>
+
+          <div class="card-content">
+
+            <div class="year">Németország veresége</div>
+
+            <p>
+              A német hadsereg kimerült,
+              az országban éhezés és elégedetlenség alakult ki.
+            </p>
+
+          </div>
+
         </div>
 
         <div class="card">
-          <div class="year">Fegyverszünet</div>
-          <p>
-            1918. november 11-én véget ért az első világháború.
-          </p>
+
+          <div class="card-content">
+
+            <div class="year">Fegyverszünet</div>
+
+            <p>
+              1918. november 11-én aláírták a fegyverszünetet,
+              amely véget vetett az első világháborúnak.
+            </p>
+
+          </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <section>
+    <section id="kov">
+
       <h2>Következmények</h2>
 
       <ul>
         <li>Több millió ember halt meg.</li>
         <li>Szétesett az Osztrák–Magyar Monarchia.</li>
-        <li>Új országok jöttek létre.</li>
+        <li>Megszűnt a Német Császárság.</li>
+        <li>Átalakult Európa térképe.</li>
         <li>1919-ben megkötötték a versailles-i békét.</li>
       </ul>
+
+    </section>
+
+    <section class="quiz-box">
+
+      <h2>🧠 Teszteld a tudásod!</h2>
+
+      <p>
+        Töltsd ki az első világháborús kvízt,
+        és nézd meg hány pontot érsz el!
+      </p>
+
+      <a href="kviz.html" class="btn">
+        Kvíz indítása
+      </a>
+
     </section>
 
   </div>
